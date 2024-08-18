@@ -1,0 +1,55 @@
+apiVersion: xl-release/v1
+kind: Templates
+spec:
+- name: XLD Server
+  type: xldeploy.XLDeployServer
+  url: http://localhost:4516/
+  username: admin
+  password: admin
+  
+- directory: REST-o-rant
+  children:
+  - template: REST-o-rant on Docker
+    description: |
+      This XL Release template shows how to deploy and undeploy an application to Docker using XL Deploy.
+    tags:
+    - REST-o-rant
+    - Docker
+    phases:
+    - phase: Deploy
+      color: '#ff9e3b'
+      tasks:
+      - name: Deploy REST-o-rant application backend
+        type: xldeploy.Deploy
+        server: XLD Server
+        deploymentPackage:  rest-o-rant-api-docker/1.1
+        deploymentEnvironment: Environments/Local Docker Engine
+      - name: Deploy REST-o-rant application frontend
+        type: xldeploy.Deploy
+        server: XLD Server
+        deploymentPackage:  rest-o-rant-web-docker/1.0
+        deploymentEnvironment: Environments/Local Docker Engine
+    - phase: Test
+      tasks:
+      - name: Test the REST-o-rant application
+        type: xlrelease.Task
+        team: Release Admin
+        description: |
+          The REST-o-rant app is now live on your local Docker Engine. Open the following link in a new browser tab or window:
+
+          http://localhost:8181/
+
+          You should see a text saying "Find the best restaurants near you!". Type "Cow" in the search bar and click "Search" to find the "Old Red Cow" restaurant.
+
+          When everything looks OK, complete this task to continue the release and undeploy the application.
+    - phase: Clean up
+      color: '#999999'
+      tasks:
+      - name: Undeploy REST-o-rant application frontend
+        type: xldeploy.Undeploy
+        server: XLD Server
+        deployedApplication: Environments/Local Docker Engine/rest-o-rant-web-docker
+      - name: Undeploy REST-o-rant application backend
+        type: xldeploy.Undeploy
+        server: XLD Server
+        deployedApplication: Environments/Local Docker Engine/rest-o-rant-api-docker
