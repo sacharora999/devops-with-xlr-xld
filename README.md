@@ -272,7 +272,7 @@ Let's start by connecting XL Deploy with your AWS account.
 1) Install the AWS CLI as described here:
 https://docs.aws.amazon.com/cli/latest/userguide/installing.html
 
-2) Configure the AWS CLI as described here and select region eu-west-1 (Ireland):
+2) Configure the AWS CLI as described here and select region ap-south-1 (Mumbai):
 https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html#cli-quick-configuration
 
     **N.B.:** If you have already been using the AWS CLI and have multiple profiles, please ensure the default profile is configured correctly.
@@ -281,14 +281,14 @@ https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html#c
 
 4) Run the provided Python script to generate an XL YAML file with your credentials:
 ```
-$ ./exercise-8/awsconfig2xld.py > exercise-8/AWSConfig.yaml
+$ ./exercise-8/awsconfig2xld.py > exercise-6/AWSConfig.yaml
 ```
 
 5) Review the generate XL YAML file.
 
 6) Apply the generated XL YAML file:
 ```
-$ xl apply -f exercise-8/AWSConfig.yaml
+$ xl apply -f exercise-6/AWSConfig.yaml
 ```
 7) In XL Deploy, navigate to the **Infrastructure/aws** object in the Explorer tree and execute the "Check connection" task to verify that the connection could be made.
 
@@ -298,7 +298,7 @@ Now privision the infrastructure using XL Deploy and CloudFormation. We'll let X
 
 1) Import the CloudFormation template and its metadata into XL Deploy:
 ```
-xl apply -f exercise-9/ecommerce-infrastructure.yaml 
+xl apply -f exercise-7/ecommerce-infrastructure.yaml 
 ```
 
 2) In XL Deploy, deploy version **1.0** of the **ecommerce-infrastructure** package to the **AWS** environment.
@@ -316,12 +316,12 @@ Now that the infrastructure has been provisioned, let's deploy the applicaiton o
 
 1) Import the e-commerce application into XL Deploy:
 ```
-$ xl apply -f exercise-10/ecommerce-application.yaml 
+$ xl apply -f exercise-8/ecommerce-application.yaml 
 ```
 
 2) Import the e-commerce pipeline into XL Release:
 ```
-$ xl apply -f exercise-10/ecommerce-pipeline.yaml
+$ xl apply -f exercise-8/ecommerce-pipeline.yaml
 ```
 
 3) In XL Release, create a new release based on the **e-Commerce CD pipeline** template in the **e-Commerce** folder. **Do not** start it yet!
