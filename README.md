@@ -9,7 +9,7 @@
 ```
 $ curl -LO https://github.com/xebialabs/devops-as-code-workshop/archive/master.zip
 $ unzip master.zip
-$ cd devops-as-code-workshop-master
+$ cd devops-with-xlr-xld
 ```
 
 
@@ -141,7 +141,7 @@ When the XL DevOps Platform was started up by the Docker Compose file, four cont
 
 Now that we have the XL DevOps Platform up and running and connected to our local Docker instance, let's create an environment that contains it.
 
-1) Open a new terminal window and go to the directory where you unzipped the `devops-as-code-workshop` repository.
+1) Open a new terminal window and go to the directory where you unzipped the `devops-with-xlr-xld` repository.
 
 2) Create the environment that contains the Docker engine by applying its XL YAML file:
 ```
