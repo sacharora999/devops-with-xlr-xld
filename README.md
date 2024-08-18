@@ -1,8 +1,9 @@
 How to start ?
 
 Download and extract zip:
-$ curl -LO https://github.com/xebialabs/devops-as-code-workshop/archive/master.zip
-$ unzip master.zip
+$ curl -LO https://github.com/sacharora999/devops-with-xlr-xld/archive/refs/heads/main.zip
+
+$ unzip main.zip
 $ cd devops-with-xlr-xld
 
 
