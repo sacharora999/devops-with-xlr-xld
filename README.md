@@ -205,10 +205,25 @@ $ xl apply -f exercise-4/rest-o-rant-docker.yaml
 
 3) Using the GUI, deploy version **1.1** of the **rest-o-rant-api-docker** package to the **Local Docker Engine** environment.
 
-4) Using the GUI, deploy version **1.0** of the **rest-o-rant-web-docker** package to the **Local Docker Engine** environment.
+   ![image](https://github.com/user-attachments/assets/af89654b-58c1-4d3a-b823-f78acb5d48b6)
 
-5) When the deployment has finished, open a new browser tab and access it at http://localhost:8181/. You should see a text saying "Find the best restaurants near you!".
+
+5) Using the GUI, deploy version **1.0** of the **rest-o-rant-web-docker** package to the **Local Docker Engine** environment.
+
+![image](https://github.com/user-attachments/assets/612ea9c2-9d36-4c6c-8238-285d56a92f28)
+
+![image](https://github.com/user-attachments/assets/0d636610-b0a2-429a-bcd3-074e09a3a6c9)
+
+
+
+6) When the deployment has finished, open a new browser tab and access it at http://localhost:8181/. You should see a text saying "Find the best restaurants near you!".
 Type "Cow" in the search bar and click "Search" to find the "Old Red Cow" restaurant.
+
+![image](https://github.com/user-attachments/assets/a99f2e8d-8202-4a3f-a5a2-916c5ac58063)
+
+![image](https://github.com/user-attachments/assets/cc116993-a81b-4fe5-99de-3dec9e7bfdc1)
+
+
 
 ## Exercise 5: Import a pipeline
 
@@ -227,9 +242,15 @@ But let's make sure that you don't forget next time that you run this workshop. 
 $ xl apply -f exercise-5/rest-o-rant-docker-pipeline.yaml
 ```
 
+![image](https://github.com/user-attachments/assets/665885a1-d143-4a0b-9f5d-400d53de6501)
+
+
 4) Open the XL Release GUI, go to **Design** tab, click on the **REST-o-rant** folder and then go to the **Templates** tab. Review the **REST-o-rant on Docker** pipeline that you've just imported and compare it to the XL YAML file.
 
 5) Start a new release from that template and follow the instructions.
+
+![image](https://github.com/user-attachments/assets/7d836c28-86e0-4798-85ca-f55b8cbc860b)
+
 
 
 
