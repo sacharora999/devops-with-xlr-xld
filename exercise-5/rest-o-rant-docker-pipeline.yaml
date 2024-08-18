@@ -3,7 +3,7 @@ kind: Templates
 spec:
 - name: XLD Server
   type: xldeploy.XLDeployServer
-  url: http://localhost:4516/
+  url: http://<ip addr of server>:4516/
   username: admin
   password: admin
   
