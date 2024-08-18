@@ -281,7 +281,7 @@ https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html#c
 
 4) Run the provided Python script to generate an XL YAML file with your credentials:
 ```
-$ ./exercise-8/awsconfig2xld.py > exercise-6/AWSConfig.yaml
+$ ./exercise-6/awsconfig2xld.py > exercise-6/AWSConfig.yaml
 ```
 
 5) Review the generate XL YAML file.
