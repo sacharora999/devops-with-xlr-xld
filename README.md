@@ -7,7 +7,8 @@
 
 1) Download and extract the workshop zip:
 ```
-$ curl -LO https://github.com/xebialabs/devops-as-code-workshop/archive/master.zip
+$ curl -LO [https://github.com/xebialabs/devops-as-code-workshop/archive/master.zip](https://github.com/sacharora999/devops-with-xlr-xld/archive/refs/heads/main.zip)
+
 $ unzip master.zip
 $ cd devops-with-xlr-xld
 ```
