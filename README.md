@@ -217,45 +217,6 @@ $ xl apply -f exercise-5/rest-o-rant-docker-pipeline.yaml
 
 5) Start a new release from that template and follow the instructions.
 
-## Exercise 6: Simplify the package and the pipeline by using dependencies
-
-You'll have noticed that the pipeline has two separate steps to deploy and later undeploy the **rest-o-rant-api-docker** and the **rest-o-rant-web-docker** packages. If we make the frontend depend on the backend, we can simplify the pipeline _and_ ensure that the frontend is not deployed without the backend.
-
-In this exercise we will make the necessary modification in the package and the pipeline and then teach you how to generate the XL YAML files for those modifications.
-
-1) In XL Deploy, open **Applications/rest-o-rant-web-docker/1.0** and add the following entry to the **Application Dependencies** map:
-
-| Key | Value	|
-|------------------------	|-----	|
-| rest-o-rant-api-docker 	| 1.1 	|
-
-and change **Undeploy Unused Dependencies** to `true`.
-
-2) In XL Release, from the **REST-o-rant on Docker** pipeline template, remove the **Deploy REST-o-rant application backend** task from the first phase and the **Undeploy REST-o-rant application backend** step from the last phase.
-
-3) Run the pipeline to verify that the application dependencies and the updated pipeline function correctly. When the pipeline has completed, go to the XL Deploy UI and check that the **rest-o-rant-api-docker** application was undeployed.
-
-4) Generate the XL YAML files for the changes:
-
-```
-$ xl generate -s xl-deploy -p Applications/rest-o-rant-web-docker -f exercise-6/rest-o-rant-web-docker-with-dependencies.yaml
-$ xl generate -s xl-release -p REST-o-rant -f exercise-6/rest-o-rant-pipeline-with-dependencies.yaml
-```
-
-5) Review the generated XL YAML files and compare them with the originals from exercises 4 and 5 respectively.
-
-## Exercise 7: Generate an XL YAML file with artifacts
-
-The XL YAML format also allows you to use artifacts. To see what that looks like, let's generate the PetClinic sample package:
-
-1) In the XL Deploy UI, import the **PetClinic-ear/1.0** sample package from the XL Deploy server.
-
-2) Generate the XL YAML file for the package you just imported to see how to specify artifacts:
-```
-$ xl generate -s xl-deploy -p Applications/PetClinic-ear/1.0 -f exercise-7/petlinic-ear.yaml
-```
-
-3) Review the generated XL YAML file and the artifact.
 
 
 # Part II - AWS (ECS and Fargate)
@@ -264,7 +225,7 @@ In Part II of the workshop we will show you how to use the XL DevOps Platform to
 
 For this part of the workshop, you'll need access to an AWS account with administrator privileges and you'll need to have Python installed on your machine.
 
-## Exercise 8: Import AWS credentials into XL Deploy
+## Exercise 6: Import AWS credentials into XL Deploy
 
 Let's start by connecting XL Deploy with your AWS account.
 
@@ -291,7 +252,7 @@ $ xl apply -f exercise-8/AWSConfig.yaml
 ```
 7) In XL Deploy, navigate to the **Infrastructure/aws** object in the Explorer tree and execute the "Check connection" task to verify that the connection could be made.
 
-## Exercise 9: Create AWS infrastructure with CloudFormation
+## Exercise 7: Create AWS infrastructure with CloudFormation
 
 Now privision the infrastructure using XL Deploy and CloudFormation. We'll let XL Deploy manage and run the CloudFormation template for us and let CloudFormation create the actual resources.
 
@@ -309,7 +270,7 @@ xl apply -f exercise-9/ecommerce-infrastructure.yaml
     * A load balancer with a target group
     * An ECS cluster
 
-## Exercise 10: Deploy a monolith application 
+## Exercise 8: Deploy a monolith application 
 
 Now that the infrastructure has been provisioned, let's deploy the applicaiton on top of it.
 
@@ -333,7 +294,7 @@ $ xl apply -f exercise-10/ecommerce-pipeline.yaml
 
 7) Wait until the release has finished.
 
-## Exercise 11: Shutting down the XL DevOps Platform
+## Exercise 9: Shutting down the XL DevOps Platform
 
 1) Shut down the XL DevOps Platform:
 
