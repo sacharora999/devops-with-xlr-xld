@@ -272,7 +272,7 @@ Let's start by connecting XL Deploy with your AWS account.
 1) Install the AWS CLI as described here:
 https://docs.aws.amazon.com/cli/latest/userguide/installing.html
 
-2) Configure the AWS CLI as described here and select region ap-south-1 (Mumbai):
+2) Configure the AWS CLI as described here and select region eu-west-1 (Ireland):
 https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html#cli-quick-configuration
 
     **N.B.:** If you have already been using the AWS CLI and have multiple profiles, please ensure the default profile is configured correctly.
@@ -284,13 +284,28 @@ https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html#c
 $ ./exercise-6/awsconfig2xld.py > exercise-6/AWSConfig.yaml
 ```
 
+![image](https://github.com/user-attachments/assets/441d5631-dda5-4c9a-a297-b572c7a5152c)
+
+
 5) Review the generate XL YAML file.
+
+![image](https://github.com/user-attachments/assets/e4c33c95-d51a-4626-83cd-aae3d1d2f475)
+
 
 6) Apply the generated XL YAML file:
 ```
 $ xl apply -f exercise-6/AWSConfig.yaml
 ```
+![image](https://github.com/user-attachments/assets/9c1463d5-3a0e-4bda-8f94-9fd8efe22fe4)
+
+
 7) In XL Deploy, navigate to the **Infrastructure/aws** object in the Explorer tree and execute the "Check connection" task to verify that the connection could be made.
+
+
+![image](https://github.com/user-attachments/assets/9b634e13-396e-4d05-b6e9-81f81a9e3703)
+
+![image](https://github.com/user-attachments/assets/217751ae-62cc-4edd-bd19-bfaf36e6eeab)
+
 
 ## Exercise 7: Create AWS infrastructure with CloudFormation
 
@@ -300,15 +315,27 @@ Now privision the infrastructure using XL Deploy and CloudFormation. We'll let X
 ```
 xl apply -f exercise-7/ecommerce-infrastructure.yaml 
 ```
+![image](https://github.com/user-attachments/assets/8b9c41d9-20e1-4fd1-bcc3-2bdaa3b84f5d)
 
 2) In XL Deploy, deploy version **1.0** of the **ecommerce-infrastructure** package to the **AWS** environment.
 
+   ![image](https://github.com/user-attachments/assets/941665df-a62e-4864-8b4d-28fa354ba1b1)
+
+
 3) When the deployment has finished, go to the AWS Console, navigate to the CloudFormation service, and review the **ecommerce-cloudformation** stack and the resources it has created:
+
+![image](https://github.com/user-attachments/assets/be9abce7-f6e7-4988-ae1d-225a5e6362f5)
+![image](https://github.com/user-attachments/assets/b1685814-2e82-4ad0-9066-5d55aa92c908)
+
 
     * A VPC with routes, subnets, etc.
     * IAM roles and policies
     * A load balancer with a target group
     * An ECS cluster
+
+
+![image](https://github.com/user-attachments/assets/bb5806e1-ef2f-409d-9ca8-84ad46b383f0)
+
 
 ## Exercise 8: Deploy a monolith application 
 
