@@ -158,15 +158,29 @@ Let's try and deploy something to our local Docker instance with XL Deploy. We'l
 ```
 $ xl apply -f exercise-3/rest-o-rant-api-docker.yaml
 ```
+![image](https://github.com/user-attachments/assets/f3241397-fdea-46d5-a247-deaffa788b12)
 
 2) Open the XL Deploy GUI and review version **1.0** of the **rest-o-rant-api-docker** application. Compare it with the contents of the XL YAML file that you applied in the previous step.
 
 3) Using the GUI, deploy version **1.0** of the **rest-o-rant-api-docker** application to the **Local Docker Engine** environment.
 
+
+![image](https://github.com/user-attachments/assets/da5c8b95-ed76-46c7-804d-e167d08b476d)
+
+
+![image](https://github.com/user-attachments/assets/2fe69bc5-f58f-472b-8d75-5e2d715da5c3)
+
+
+![image](https://github.com/user-attachments/assets/1b294ff1-caaa-4001-bb9e-f3239a3aa719)
+
+
+
+
 4) When the deployment has finished, check whether the **rest-o-rant-api** container is running:
 ```
 $ docker ps
 ```
+![image](https://github.com/user-attachments/assets/134a485a-03b9-42dd-82d9-58ae8ba93210)
 
 The output should look something like this:
 ```
