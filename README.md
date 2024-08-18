@@ -1,9 +1,9 @@
 # DevOps with xlr and xld
 
 
-# Install the workshop
+# How to start ?
 
-## Get the workshop
+## Download the code
 
 1) Download and extract the workshop zip:
 ```
