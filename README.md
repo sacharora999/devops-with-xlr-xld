@@ -3,6 +3,7 @@ How to start ?
 Download and extract zip:
 $ curl -LO https://github.com/sacharora999/devops-with-xlr-xld/archive/refs/heads/main.zip
 
+
 $ unzip main.zip
 $ cd devops-with-xlr-xld
 
@@ -50,9 +51,13 @@ When the XL DevOps Platform was started up by the Docker Compose file, four cont
 
 xl-deploy runs XL Deploy.
 xl-release runs XL Release.
+
 dockerproxy is where XL Deploy will deploy to. It's a proxy for the Docker engine on your local machine, the same that runs XL Release and XL Deploy..
+
 xl-cli runs the XL CLI to apply the configure-xl-devops-platform.yaml YAML file. This XL YAML file adds two configurations:
+
 It adds an XL Deploy configuration to XL Release so that the latter can find the former.
+
 It adds a docker.Engine configuration to XL Deploy so that XL Deploy can deploy to the Docker engine (via the Docker proxy).
 
 
