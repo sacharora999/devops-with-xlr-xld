@@ -304,6 +304,4 @@ $ docker-compose down
 
 Not only will this stop the XL DevOps Platform, it will also remove any data stored on it. Therefore you should make sure that all releases and deployments have finished and that you've undeployed any applications you've deployed with it before you shut down the XL DevOps Platform.
 
-## Bonus exercise: create something new!
 
-OK, that was cool and all. Now use the `xl generate` command to learn more about the YAML format and build your own YAML file.
