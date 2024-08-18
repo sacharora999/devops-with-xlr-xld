@@ -1,27 +1,5 @@
-# DevOps as Code workshop
+# DevOps with xlr and xld
 
-This workshop will teach you:
-
-* How to start up the XL DevOps Platform with the devops-as-code features installed
-* How to install the XL CLI
-* How to import and deploy a Docker application with XL Deploy
-* How to import and run a pipeline with XL Release
-* How to generate XL YAML files to learn about the syntax
-
-## Prerequisites
-
-You'll need to have Docker installed on your machine before you begin:
-* Mac: https://docs.docker.com/docker-for-mac/
-* Windows: https://docs.docker.com/docker-for-windows/
-* Linux: Refer to the instructions for your Linux distribution on how to install Docker
-
-For part II of the workshop, you will also need:
-* Access to an AWS account with administrator privileges
-* Python
-
-## Security warning
-
-The docker compose setup potentially exposes weakly protected services to the network. Please use a firewall to block incoming network connections and avoid running the setup while connected to public networks. Also make sure to stop all containers by running `docker-compose down` when finished with the workshop. 
 
 # Install the workshop
 
@@ -33,13 +11,7 @@ $ curl -LO https://github.com/xebialabs/devops-as-code-workshop/archive/master.z
 $ unzip master.zip
 $ cd devops-as-code-workshop-master
 ```
-## Install licenses for XL Deploy and XL Release
 
-The workshop requires you to bring your own licenses for XL Deploy and XL Release. You can use production licenses or request trial licenses for [XL Deploy](https://xebialabs.com/products/xl-deploy/trial/) and  [XL Release](https://xebialabs.com/products/xl-release/trial/).
-
-1) Copy the XL Deploy license to `docker/xl-deploy/default-conf/deployit-license.lic`
-
-2) Copy the XL Release license to `docker/xl-release/default-conf/xl-release-license.lic`
 
 ## Start up the XL DevOps Platform
 
@@ -59,14 +31,10 @@ For more information on this environment variable, read [the documentation for D
 $ docker-compose up --build
 ```
 
-4) Wait for XL Deploy and XL Release to have started up. This will have occurred when the following line is shown in the logs:
-```
-devops-as-code-workshop_xl-cli_1 exited with code 0
-```
+4) Wait for XL Deploy and XL Release to have started up. 
 
-5) Open the XL Deploy GUI at http://localhost:4516/ and login with the username `admin` and password `admin`. Verify that the about box reports the version to be **8.6.1**.
-
-6) Open the XL Release GUI at http://localhost:5516/ and login with the username `admin` and password `admin`. Verify that the about box reports the version to be **8.6.1**.
+5) Open the XL Deploy GUI at http://localhost:4516/ and login with the username `admin` and password `admin`. 
+6) Open the XL Release GUI at http://localhost:5516/ and login with the username `admin` and password `admin`. 
 
 ## Install the XL CLI
 
@@ -158,7 +126,7 @@ Use "xl [command] --help" for more information about a command.
 
 ## Exercise 1: Review the XL DevOps Platform running on Docker
 
-When the XL DevOps Platform was started up by [the Docker Compose file](https://github.com/xebialabs/devops-as-code-workshop/blob/master/docker-compose.yaml), four containers were started:
+When the XL DevOps Platform was started up by the Docker Compose file, four containers were started:
 * `xl-deploy` runs XL Deploy.
 * `xl-release` runs XL Release.
 * `dockerproxy` is where XL Deploy will deploy to. It's a proxy for the Docker engine on your local machine, the same that runs XL Release and XL Deploy..
