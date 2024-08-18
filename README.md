@@ -242,6 +242,11 @@ But let's make sure that you don't forget next time that you run this workshop. 
 $ xl apply -f exercise-5/rest-o-rant-docker-pipeline.yaml
 ```
 
+Make sure to update IP Addr of XLD Server in below template
+
+![image](https://github.com/user-attachments/assets/ab6ae587-7aab-4449-8782-42878a14c5b2)
+
+
 ![image](https://github.com/user-attachments/assets/665885a1-d143-4a0b-9f5d-400d53de6501)
 
 
