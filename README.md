@@ -8,7 +8,7 @@
 1) Download and extract the workshop zip:
 ```
 $ curl -LO https://github.com/sacharora999/devops-with-xlr-xld/archive/refs/heads/main.zip
-$ unzip master.zip
+$ unzip main.zip
 $ cd devops-with-xlr-xld
 ```
 
