@@ -28,7 +28,7 @@ For more information on this environment variable, read [the documentation for D
 3) Start up the XL DevOps Platform:
 
 ```
-$ docker-compose up --build
+$ docker compose up --build
 ```
 
 4) Wait for XL Deploy and XL Release to have started up. 
